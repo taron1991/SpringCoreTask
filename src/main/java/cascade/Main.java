@@ -45,17 +45,8 @@ public class Main {
 
         session.beginTransaction();
 
-        Driver result = session.get(Driver.class, 8);
-        List<Car> resultCars = result.getCars();
-
-        IntStream.range(0, resultCars.size()).forEach(i -> {
-            Car car = resultCars.get(i);
-            car.setDriver(null);
-            session.save(car);
-        });
-
-        result.setCars(null);
-        session.delete(result);
+        session.save(driver);
+        session.save(driver);
 
         session.getTransaction().commit();
 
