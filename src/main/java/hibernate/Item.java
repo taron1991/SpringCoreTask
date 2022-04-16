@@ -1,6 +1,5 @@
 package hibernate;
 
-import com.vk.api.sdk.objects.groups.Address;
 import lombok.*;
 
 import javax.persistence.*;
